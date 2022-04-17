@@ -1,0 +1,19 @@
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <!--ngFor ha duplicado segun el numero de objetos en el []-->
+    <div class="col" *ngFor="let food of foods; let i=index">
+      <div class="card h-100">
+        <!--[src]="food.img" funciona igual que {{}}-->
+        <img src="{{food.img}}" class="card-img-top" alt="{{food.nombre}}">
+        <div class="card-body">
+          <h5 class="card-title">{{food.nombre}}</h5>
+          <p class="card-text">Calificación: {{food.calificacion}}</p>
+          <p class="card-text">Dificultad: {{food.dificultad}}</p>
+
+        </div>
+        <div class="card-footer">
+          <button (click)="verFood(i)" type="button" class="btn btn-outline-primary">Ver más...</button>
+          <!--<a [routerLink]="['/food',i]" class="btn btn-outline-primary">Ver más...</a>-->
+        </div>
+      </div>
+    </div> 
+</div>

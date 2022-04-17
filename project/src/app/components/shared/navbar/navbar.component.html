@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+      <!-- Just an image -->
+<nav class="navbar navbar-light bg-D">
+  <a class="navbar-brand" href="#">
+    <img src="/assets/img/icono.png" width="50" height="50" alt="">
+  </a>
+</nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <!--USANDO EL ROUTERLINKACTIVE EN <A> SE VE MAS DESTACADO-->
+        <li class="nav-item">
+          <!--PARA LINKEAR SUSTITUIMOS HREF POR [routerLink]-->
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['home']">Home</a>  
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['foods']">Foods</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['about']">About</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search Food" aria-label="Search" #buscarTexto>
+        <button (click)="buscarFood(buscarTexto.value)"
+        class="btn btn-outline-primary" type="button">Feedme</button>
+      </form>
+    </div>
+  </div>
+</nav>
